@@ -6,13 +6,26 @@ import java.awt.*;
 import java.awt.image.*;
 import javax.imageio.ImageIO;
 public class transaction {
+    //FileWriter is used to write user details into a file
     public FileWriter f4,f5;
+    
     public String s9,s10,curr;
+    
+    //JFrame is used to create a window for interacting with users
     public JFrame f,f1,f2,fhome,finfo,fdep,fwith,ftransfer;
+    
+    //JLabel is used to display details in the Frame
     public JLabel lblmobile,mobile,lblwithinfo2,lbldep2,lbldep3,lbl1,lbl2,hlbl,lblintro,lblsign,lbllog,lblamt,lblname,username,amount,lblamount1,lblamount,infolbl,lbldepinfo,lbldep,lbltrantoacct,lblwithinfo,lblwith;
+    
+    //JTextField is used to get the user inputs in the Frame
     public JTextField txtwith2,txtdep2,txtdep3,txt1,txt2,txt10,mob,txtdep,txtdep1,txtwith,txttran,txttrantoacct;
+    
+    //JPasswordField is used to enter user detail without displaying on the screen
     public JPasswordField pass1,pass2,pass10; 
+    
+    //JButton is used to create a button that can handle actionListener
     public JButton bdepok2,b1,b2,b3,b4,b5,b6,binfo,bdeposit,bwithdraw,btransfer,blogout,bok,bdepok,bwithok,btranok;
+    
     public transaction()
     {
         //User PAGE , creating properties of the frame
@@ -246,12 +259,12 @@ public class transaction {
         String s1,s2,s3,s4,c1,c2,c3;
         public void actionPerformed(ActionEvent e)
         {
-            if(e.getSource()==b3)
+            if(e.getSource()==b3) // Redirect to login page
             {
                 f1.setVisible(false);
                 f.setVisible(true);
             }
-            if(e.getSource()==b4)
+            if(e.getSource()==b4) //Redirect to signup page
             {
                 f1.setVisible(false);
                 f2.setVisible(true);             
@@ -307,12 +320,12 @@ public class transaction {
                   {
                   }
               }
-              if(e.getSource()==b2)
+              if(e.getSource()==b2) //Cancel signup page.
               {
                   f2.dispose();
                   f1.setVisible(true);
               }
-              if(e.getSource()==b5)
+              if(e.getSource()==b5) //Login validation
               {
                  s1=txt10.getText();
                  s2=pass10.getText();
@@ -354,12 +367,12 @@ public class transaction {
                 {
                 }
             }
-            if(e.getSource()==b6)
+            if(e.getSource()==b6) //Cancel login page.
             {
                 f.dispose();
                 f1.setVisible(true);
             }
-            if(e.getSource()==binfo)
+            if(e.getSource()==binfo) // Displaying user information page
             {
                  String str1 = null,str2 = null;
                  String amt = null;
@@ -371,6 +384,7 @@ public class transaction {
                     
                     BufferedReader b1=new BufferedReader(f1);
                     BufferedReader b2=new BufferedReader(f2);
+                    // Finding username of current user with given mobile number
                     for(str1=b1.readLine(),str2=b2.readLine();str1!=null&&str2!=null;str1=b1.readLine(),str2=b2.readLine())
                     {
                         if(str2.equals(s1))
@@ -380,7 +394,7 @@ public class transaction {
                     }
                     FileReader f3=new FileReader(s1+".txt");
                     BufferedReader b3=new BufferedReader(f3);
-                    
+                    //Finding the current balance
                     for(amt=b3.readLine();amt!=null;amt=b3.readLine())
                     {
                         str=amt;
@@ -434,22 +448,24 @@ public class transaction {
                 handler l=new handler();
                 bok.addActionListener(l);
             }
+            //Close info page and come to user's home page.
             if(e.getSource()==bok)
             {
                 finfo.dispose();
                 fhome.setVisible(true);
             }
+            // Logout of current user session
             if(e.getSource()==blogout)
             {
                 fhome.dispose();
                 f1.setVisible(true);
             }
-            if(e.getSource()==bdeposit)
+            if(e.getSource()==bdeposit) //Action Listener for displaying deposit page
             {
                 fhome.dispose();
                 fdep.setVisible(true);
             }
-            if(e.getSource()==bdepok)
+            if(e.getSource()==bdepok) //Action Listener for depositing money
             {
                 try
                 {
@@ -483,12 +499,12 @@ public class transaction {
                 fdep.dispose();
                 fhome.setVisible(true);
             }
-            if(e.getSource()==bwithdraw)
+            if(e.getSource()==bwithdraw) //Action Listener for displaying withdraw page
             {
                 fhome.dispose();
                 fwith.setVisible(true);
             }
-            if(e.getSource()==bwithok)
+            if(e.getSource()==bwithok) //Action Listener for withdrawing money
             {
                 try
                 {
@@ -522,17 +538,12 @@ public class transaction {
                 fwith.dispose();
                 fhome.setVisible(true);
             }
-            if(e.getSource()==btransfer)
+            if(e.getSource()==btransfer) //Action Listener for displaying transfer page
             {
                 fhome.dispose();
                 ftransfer.setVisible(true);
             }
-            if(e.getSource()==btranok)
-            {
-                ftransfer.dispose();
-                fhome.setVisible(true);
-            }
-            if(e.getSource()==bdepok2)
+            if(e.getSource()==bdepok2) //Action Listener for transferring money
             {
                 try
                 {
@@ -540,6 +551,7 @@ public class transaction {
                     BufferedReader b3=new BufferedReader(f3);
                     String curr_amt=null;
                     String amt;
+                    //Find the current balance of the user.
                     for(amt=b3.readLine();amt!=null;amt=b3.readLine())
                     {
                         curr_amt=amt;
@@ -570,6 +582,7 @@ public class transaction {
                     BufferedReader b3=new BufferedReader(f3);
                     String curr_amt=null;
                     String amt;
+                    //Finding the current balance of the user.
                     for(amt=b3.readLine();amt!=null;amt=b3.readLine())
                     {
                         curr_amt=amt;
