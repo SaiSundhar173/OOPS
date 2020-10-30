@@ -12,13 +12,13 @@ import java.io.File.*;
 import java.io.*; 
 public class Bankdemo {
     public static void main(String[] args) {
-        transaction t=new transaction(); //
+        transaction t=new transaction(); //Creating an object for transaction
         String filename = "serial.ser";
         try
         {
             FileOutputStream file = new FileOutputStream(filename); 
             ObjectOutputStream out = new ObjectOutputStream(file);
-            out.writeObject(t); 
+            out.writeObject(t); //serializing the transaction object.
             out.close(); 
             file.close(); 
             System.out.println("Object has been serialized"); 
