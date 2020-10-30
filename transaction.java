@@ -15,7 +15,7 @@ public class transaction {
     public JButton bdepok2,b1,b2,b3,b4,b5,b6,binfo,bdeposit,bwithdraw,btransfer,blogout,bok,bdepok,bwithok,btranok;
     public transaction()
     {
-        //User PAGE
+        //User PAGE , creating properties of the frame
         fhome=new JFrame("Welcome");
         fhome.setVisible(false);
         fhome.setSize(800,800);
@@ -23,6 +23,7 @@ public class transaction {
         fhome.setLayout(null);
         fhome.getContentPane().setBackground(Color.red);
         
+        //Initializing the attributes (like button) of the frame
         hlbl=new JLabel("WELCOME TO ONLINE BANKING");
         blogout=new JButton("Logout");
         binfo=new JButton("Information");
@@ -30,13 +31,15 @@ public class transaction {
         bwithdraw=new JButton("Withdraw");
         btransfer=new JButton("Transfer");
         
+        //Setting position of attributes in the frame
         hlbl.setBounds(275,100,300,30);
         binfo.setBounds(200,150,150,30);
         bdeposit.setBounds(200,220,150,30);
         bwithdraw.setBounds(400,150,150,30);
         btransfer.setBounds(400,220,150,30);
         blogout.setBounds(300,420,150,30);
-           
+        
+        //finally adding the attributes into the frame
         fhome.add(hlbl);
         fhome.add(binfo);
         fhome.add(bdeposit);
@@ -51,14 +54,17 @@ public class transaction {
         fdep.setLayout(null);
         fdep.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        //Initializing the attributes (like button) of the frame
         lbldep=new JLabel("Amount");
         txtdep=new JTextField();
         bdepok=new JButton("OK");
                
+        //Setting position of attributes in the frame
         lbldep.setBounds(250,150,150,30);
         txtdep.setBounds(425,150,100,30);
         bdepok.setBounds(325,200,100,30);
 
+        //finally adding the attributes into the frame
         fdep.add(lbldep);
         fdep.add(txtdep);
         fdep.add(bdepok);
@@ -70,14 +76,17 @@ public class transaction {
         fwith.setLayout(null);
         fwith.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 
+        //Initializing the attributes (like button) of the frame
         lblwithinfo=new JLabel("Amount");
         txtwith=new JTextField();
         bwithok=new JButton("OK");
                
+        //Setting position of attributes in the frame
         lblwithinfo.setBounds(275,100,300,30);
         txtwith.setBounds(425,100,100,30);
         bwithok.setBounds(325,200,100,30);
 
+         //finally adding the attributes into the frame
         fwith.add(lblwithinfo);
         fwith.add(txtwith);
         fwith.add(bwithok);
@@ -89,16 +98,19 @@ public class transaction {
         f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f1.setLayout(null);
         
+        //Initializing the attributes (like button) of the frame
         lblintro=new JLabel("BANKING");
         b3=new JButton("LOGIN");
         b4=new JButton("SIGNUP");
         lbllog=new JLabel("HAVE AN ACCOUNT?? LOGIN ELSE SIGNUP");
         
+        //Setting position of attributes in the frame
         lblintro.setBounds(350,250,300,30);
         b3.setBounds(325,350,100,30);
         b4.setBounds(325,400,100,30);
         lbllog.setBounds(250,450,300,30);
         
+         //finally adding the attributes into the frame
         f1.add(lblintro);
         f1.add(b3);
         f1.add(b4);
@@ -111,6 +123,7 @@ public class transaction {
         f.setSize(800,800);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        //Initializing the attributes (like button) of the frame
         lbllog=new JLabel("ENTER YOUR DETAILS");
         lbl1=new JLabel("MOBILE NUMBER");
         lbl2=new JLabel("PASSWORD");
@@ -119,6 +132,7 @@ public class transaction {
         b5=new JButton("OK");
         b6=new JButton("CANCEL");
 
+        //Setting position of attributes in the frame
         lbllog.setBounds(320,100,300,30);
         lbl1.setBounds(250,150,100,30);
         lbl2.setBounds(250,220,100,30);
@@ -127,6 +141,7 @@ public class transaction {
         b5.setBounds(250,275,100,30);
         b6.setBounds(400,275,100,30);
 
+         //finally adding the attributes into the frame
         f.add(lbllog);
         f.add(lbl1);
         f.add(txt10);
@@ -142,6 +157,7 @@ public class transaction {
         f2.setLayout(null);
         f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 
+        //Initializing the attributes (like button) of the frame
         lblamt=new JLabel("MOBILE NUMBER");
         lblsign=new JLabel("PLEASE FILL THE APPROPRIATE DETAILS");
         JLabel lbluser=new JLabel("USERNAME");
@@ -154,6 +170,7 @@ public class transaction {
         b1=new JButton("SUBMIT");
         b2=new JButton("CANCEL");
                
+        //Setting position of attributes in the frame
         lblamt.setBounds(250,360,100,30);
         mob.setBounds(400,360,100,30);
         lblsign.setBounds(280,100,300,30);
@@ -166,6 +183,7 @@ public class transaction {
         b1.setBounds(250,450,100,30);
         b2.setBounds(450,450,100,30);
 
+         //finally adding the attributes into the frame
         f2.add(lblamt);
         f2.add(mob);
         f2.add(lblsign);
@@ -185,18 +203,21 @@ public class transaction {
         ftransfer.setLayout(null);
         ftransfer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 
+        //Initializing the attributes (like button) of the frame
         lbldep2=new JLabel("To");
         txtdep2=new JTextField();
         lbldep3=new JLabel("Amount");
         txtdep3=new JTextField();
         bdepok2=new JButton("OK");
                
+        //Setting position of attributes in the frame
         lbldep2.setBounds(250,150,150,30);
         txtdep2.setBounds(425,150,100,30);
         lbldep3.setBounds(250,200,150,30);
         txtdep3.setBounds(425,200,100,30);
         bdepok2.setBounds(325,250,100,30);
 
+         //finally adding the attributes into the frame
         ftransfer.add(lbldep2);
         ftransfer.add(txtdep2);
         ftransfer.add(lbldep3);
@@ -220,7 +241,7 @@ public class transaction {
         bwithok.addActionListener(l);
         bdepok2.addActionListener(l);
     }
-    private class handler implements ActionListener
+    private class handler implements ActionListener //Event handler class that performs corresponding functions after button click event
     {
         String s1,s2,s3,s4,c1,c2,c3;
         public void actionPerformed(ActionEvent e)
@@ -235,10 +256,11 @@ public class transaction {
                 f1.setVisible(false);
                 f2.setVisible(true);             
             }
-            if(e.getSource()==b1)
+            if(e.getSource()==b1) // First time sign up
             {
                 f2.dispose();
                 f1.setVisible(true);
+                //Getting detail from the data entered in the textfield by user.
                 s1=txt1.getText();
                 s2=pass1.getText();
                 s3=pass2.getText();
@@ -247,6 +269,7 @@ public class transaction {
                   {
                       if(s2.equals(s3))
                       {
+                          //Create files for the corresponding user and update the entry of new user.
                          FileWriter file1=new FileWriter("names.txt",true);
                          FileWriter file2=new FileWriter("pass.txt",true);
                          FileWriter file3=new FileWriter("mobile.txt",true);
@@ -303,6 +326,7 @@ public class transaction {
                      BufferedReader b1=new BufferedReader(f1);
                      BufferedReader b2=new BufferedReader(f2);
                      BufferedReader b3=new BufferedReader(name);
+                     //Authenticating the validity of the user.
                      for(c1=b1.readLine(),c2=b2.readLine(),c3=b3.readLine();c1!=null&&c2!=null&&c3!=null;c1=b1.readLine(),c2=b2.readLine(),c3=b3.readLine())
                      {
                         if(c1.equals(s1)&&c2.equals(s2))
@@ -372,6 +396,7 @@ public class transaction {
                 catch(Exception ae)
                 {
                 }
+                 //Displaying user details (Name, Mobile, Amount)
                 fhome.dispose();
                 finfo=new JFrame("ACCOUNT DETAILS");
                 finfo.setVisible(true);
@@ -442,7 +467,7 @@ public class transaction {
                     String input=txtdep.getText();
                     int cur_amount=Integer.parseInt(curr_amt);
                     int curr_input=Integer.parseInt(input);
-                    int sum=cur_amount+curr_input;
+                    int sum=cur_amount+curr_input; //Increment since the user is depositing
                     String new_amt=String.valueOf(sum);
                     
                     FileWriter file4=new FileWriter(s1+".txt",true);
@@ -481,7 +506,7 @@ public class transaction {
                     String input=txtwith.getText();
                     int cur_amount=Integer.parseInt(curr_amt);
                     int curr_input=Integer.parseInt(input);
-                    int sum=cur_amount-curr_input;
+                    int sum=cur_amount-curr_input; // Decrement since the user is withdrawing
                     String new_amt=String.valueOf(sum);
                     
                     FileWriter file4=new FileWriter(s1+".txt",true);
@@ -525,7 +550,7 @@ public class transaction {
                     String input=txtdep3.getText();
                     int cur_amount=Integer.parseInt(curr_amt);
                     int curr_input=Integer.parseInt(input);
-                    int sum=cur_amount-curr_input;
+                    int sum=cur_amount-curr_input; //Decrement for current user.
                     String new_amt=String.valueOf(sum);
                     
                     FileWriter file4=new FileWriter(s1+".txt",true);
@@ -555,7 +580,7 @@ public class transaction {
                     String input=txtdep3.getText();
                     int cur_amount=Integer.parseInt(curr_amt);
                     int curr_input=Integer.parseInt(input);
-                    int sum=cur_amount+curr_input;
+                    int sum=cur_amount+curr_input; //And increment for the benefitter
                     String new_amt=String.valueOf(sum);
                     
                     FileWriter file4=new FileWriter(temp+".txt",true);
